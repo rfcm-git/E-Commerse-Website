@@ -19,7 +19,7 @@ const Layout = ({categories}) => {
     <>
         <header>
             <div id="headerHomeIcon">
-                <Link to= '/' ><HomeIcon width={40} /></Link>
+                <Link to= '/Home' ><HomeIcon width={40} /></Link>
             </div>
 
             <Search />

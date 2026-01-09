@@ -33,3 +33,7 @@ export const getProductById = id => {
 export const getProductsByQuery = query => {
     return fetcher('/products?q=' + query);
 }
+
+export const getAllProducts = () => {
+    return fetcher('/products');
+}

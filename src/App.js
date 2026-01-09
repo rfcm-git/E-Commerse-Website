@@ -31,7 +31,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path= "/" element={<Layout categories={categories} />} >
-            <Route index element= {<Home />} />
+            <Route path= "home" element= {<Home />} />
             <Route path= "Basket" element= {<Basket />} />
             <Route path= "Checkout" element= { <Checkout />} />
             <Route path= "OrderConfirmation" element= { <OrderConfirmation />} />
