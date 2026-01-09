@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+E-Commerse-Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Full-stack e-commerce website built with React providing product management, shopping cart, and checkout functionality. It includes category browsing, product listing, product details pages, and basic navigation between pages.
 
-## Available Scripts
+🚀 Features
 
-In the project directory, you can run:
+📦 Product listing on homepage
 
-### `npm start`
+🛍️ Category filtering of products
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+📄 Product detail pages
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🛒 Shopping cart integration
 
-### `npm test`
+💳 Checkout workflow
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🔁 Navigation using React Router
 
-### `npm run build`
+Your app fetches data from a backend API using REST calls like getProducts, getProductById, and other helper functions in fetcher.js.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🧰 Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project uses:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+React — Frontend library
 
-### `npm run eject`
+React Router — Client-side routing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Context API — Shared state (cart management)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+REST API fetcher — Data fetching utility
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+styled-components — CSS in JS styling
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Create React App — Project bootstrapping
 
-## Learn More
+📁 Folder Structure
+E-Commerse-Website/
+├── public/                 # Static assets
+├── src/
+│   ├── components/         # Reusable React components
+│   ├── pages/              # Page components (Home, Category, Product, etc.)
+│   ├── Contexts/           # Global state (CartContext)
+│   ├── fetcher.js          # API fetch utility
+│   ├── App.js              # Main router and app structure
+│   └── index.js            # App entry point
+├── package.json            # Project metadata + scripts
+└── .gitignore
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🧪 Getting Started
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Follow these steps to run the project locally:
 
-### Code Splitting
+1️⃣ Clone the repository
+git clone https://github.com/rfcm-git/E-Commerse-Website.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2️⃣ Install dependencies
+cd E-Commerse-Website
+npm install
 
-### Analyzing the Bundle Size
+3️⃣ Create backend API (optional)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+If you haven’t already, create or run your backend API server that serves product data at a known endpoint (e.g., http://localhost:3001). Your frontend uses this base URL by default.
 
-### Making a Progressive Web App
+4️⃣ Start the development server
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+This will open the website in the browser (usually under http://localhost:3000).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+📌 Project Usage
+Homepage
 
-### Deployment
+Displays a list of products fetched from API.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Product Details
 
-### `npm run build` fails to minify
+Click any product link to view its details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Category Pages
+
+Navigate by category to see filtered products.
+
+Shopping Cart
+
+Add products from listing or detail pages and view them in the cart.
+
+🛠 API Endpoints
+
+Your fetch utility assumes the following paths:
+
+Function	Endpoint
+getCategories()	/categories
+getProducts(catId)	/products?catId={id}
+getProductById(id)	/products/{id}
+getProductsByQuery(q)	/products?q={query}
+🎨 Styling
+
+This app uses styled-components for component-level styling, making it easy to manage and scope styles.
+
+🤝 Contributing
+
+Contributions are welcome!
+To contribute:
+
+Fork the repository
+
+Create a feature branch
+
+Make changes
+
+Submit a pull request
